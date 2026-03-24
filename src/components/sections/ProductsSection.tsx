@@ -49,7 +49,7 @@ export const ProductsSection: React.FC = () => {
             whileHover={{ animationPlayState: "paused" }}
           >
             {(() => {
-              const subs: { name: string, description: string, image: string, brandName: string }[] = [];
+              const subs: { name: string, description: string, image?: string, brandName: string }[] = [];
               BRANDS_DATA.forEach(brand => {
                 if (brand.subcategories) {
                   brand.subcategories.forEach(sub => subs.push({ ...sub, brandName: brand.name }));
