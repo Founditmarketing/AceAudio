@@ -12,7 +12,7 @@ import { AnimatePresence, motion } from 'motion/react';
 
 // Scroll to top on route change
 function ScrollToTop() {
-  const { pathname, hash } = useLocation();
+  const { pathname, hash, search } = useLocation();
 
   useEffect(() => {
     if (!hash) {
@@ -24,7 +24,7 @@ function ScrollToTop() {
         element.scrollIntoView({ behavior: 'smooth' });
       }
     }
-  }, [pathname, hash]);
+  }, [pathname, hash, search]);
 
   return null;
 }
