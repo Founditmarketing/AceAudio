@@ -122,7 +122,11 @@ export const Products: React.FC = () => {
                     transition={{ delay: 0.2 }}
                   >
                     <h3 className="text-3xl font-black mb-12 text-center text-primary uppercase">{brand.name} Products</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className={`grid grid-cols-1 gap-8 ${
+                      brand.subcategories.length === 1 ? 'max-w-md mx-auto' : 
+                      brand.subcategories.length === 2 ? 'md:grid-cols-2 max-w-4xl mx-auto' : 
+                      'md:grid-cols-3'
+                    }`}>
                       {brand.subcategories.map(sub => (
                         <Card key={sub.name} className="flex flex-col h-full bg-bg-main p-8 border-white/5 hover:border-white/20 shadow-xl">
                           <h4 className="text-xl font-bold mb-4 text-white uppercase tracking-wider">{sub.name}</h4>
