@@ -7,7 +7,7 @@ import { About } from './pages/About';
 import { Reviews } from './pages/Reviews';
 import { Blog } from './pages/Blog';
 import { Contact } from './pages/Contact';
-import { ProductCategory } from './pages/ProductCategory';
+import { Products } from './pages/Products';
 import { AnimatePresence, motion } from 'motion/react';
 
 // Scroll to top on route change
@@ -47,7 +47,7 @@ function AnimatedRoutes() {
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/products/:categoryId" element={<ProductCategory />} />
+          <Route path="/products" element={<Products />} />
         </Routes>
       </motion.div>
     </AnimatePresence>

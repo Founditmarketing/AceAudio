@@ -134,7 +134,7 @@ export const Navbar: React.FC = () => {
                       {PRODUCT_SECTIONS.map((section) => (
                         <Link
                           key={section.id}
-                          to={`/products/${section.id}`}
+                          to={`/products?filter=${section.id}`}
                           className="text-sm text-white/80 hover:text-primary hover:translate-x-2 transition-all py-2 border-b border-white/5 last:border-0"
                         >
                           {section.title}
@@ -201,7 +201,7 @@ export const Navbar: React.FC = () => {
                   {PRODUCT_SECTIONS.map((section) => (
                     <Link
                       key={section.id}
-                      to={`/products/${section.id}`}
+                      to={`/products?filter=${section.id}`}
                       className="text-white/80 hover:text-primary"
                     >
                       {section.title}
