@@ -128,7 +128,7 @@ export const Navbar: React.FC = () => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-2 w-64 glass-card p-4 border-primary/30 shadow-[0_0_20px_var(--shadow-glow-primary)]"
+                    className="absolute top-full left-0 mt-2 w-64 bg-bg-main border border-primary/30 shadow-[0_0_20px_var(--shadow-glow-primary)] z-50 p-4"
                   >
                     <div className="flex flex-col gap-2">
                       <Link

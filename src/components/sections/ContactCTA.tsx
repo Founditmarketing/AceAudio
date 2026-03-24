@@ -11,7 +11,7 @@ export const ContactCTA: React.FC = () => {
         <img 
           src="https://aceaudioinc.com/wp-content/uploads/2021/03/slide-rgb-lights.jpg" 
           alt="Car Interior" 
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-50"
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-bg-main via-bg-main/80 to-transparent" />
