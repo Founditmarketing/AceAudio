@@ -36,13 +36,14 @@ export const ProductsSection: React.FC = () => {
         </div>
 
         {/* Product Categories Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-wrap justify-center gap-8">
           {PRODUCT_SECTIONS.map((section, index) => {
             const IconComponent = (Icons as any)[section.icon];
 
             return (
               <motion.div
                 key={section.id}
+                className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)]"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
