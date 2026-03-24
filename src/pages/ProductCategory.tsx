@@ -84,7 +84,7 @@ export const ProductCategory: React.FC = () => {
                      </div>
                      {brand.image && (
                        <div className="flex-1">
-                         <img src={brand.image} alt={brand.name} className="w-full rounded-2xl border border-white/5 object-cover shadow-2xl" />
+                         <img src={brand.image} alt={brand.name} className="w-full rounded-2xl border border-white/5 object-cover shadow-2xl" referrerPolicy="no-referrer" />
                        </div>
                      )}
                    </motion.div>
@@ -109,7 +109,7 @@ export const ProductCategory: React.FC = () => {
                              <h4 className="text-xl font-bold mb-4 text-white uppercase tracking-wider">{sub.name}</h4>
                              <p className="text-white/60 text-sm leading-relaxed mb-6 flex-grow">{sub.description}</p>
                              {sub.image && (
-                               <img src={sub.image} alt={sub.name} className="mt-4 rounded-lg w-full h-40 object-cover border border-white/5" />
+                               <img src={sub.image} alt={sub.name} className="mt-4 rounded-lg w-full h-40 object-cover border border-white/5" referrerPolicy="no-referrer" />
                              )}
                            </Card>
                          ))}
