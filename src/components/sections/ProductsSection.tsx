@@ -39,15 +39,6 @@ export const ProductsSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {PRODUCT_SECTIONS.map((section, index) => {
             const IconComponent = (Icons as any)[section.icon];
-            
-            const colorMap = [
-              { text: 'text-primary', bg: 'bg-primary/10', glow: 'primary', groupHover: 'group-hover:text-primary' },
-              { text: 'text-secondary', bg: 'bg-secondary/10', glow: 'secondary', groupHover: 'group-hover:text-secondary' },
-              { text: 'text-accent-1', bg: 'bg-accent-1/10', glow: 'accent1', groupHover: 'group-hover:text-accent-1' },
-              { text: 'text-accent-2', bg: 'bg-accent-2/10', glow: 'accent2', groupHover: 'group-hover:text-accent-2' }
-            ];
-            
-            const pColor = colorMap[index % 4];
 
             return (
               <motion.div
@@ -60,22 +51,22 @@ export const ProductsSection: React.FC = () => {
                 <Link to={`/products/${section.id}`}>
                   <Card 
                     className="h-full flex flex-col items-center text-center p-10 group cursor-pointer"
-                    glowColor={pColor.glow as any}
+                    glowColor="primary"
                   >
                     <div className={cn(
                       "w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-110",
-                      pColor.bg, pColor.text
+                      "bg-gradient-to-br from-primary/20 to-secondary/10 text-secondary"
                     )}>
                       {IconComponent && <IconComponent size={32} />}
                     </div>
-                    <h3 className={cn("text-2xl font-bold mb-4 transition-colors", pColor.groupHover)}>{section.title}</h3>
+                    <h3 className={cn("text-2xl font-bold mb-4 transition-colors", "group-hover:text-primary")}>{section.title}</h3>
                     <p className="text-white/60 text-sm leading-relaxed mb-8">
                       {section.description}
                     </p>
                     <span 
                       className={cn(
                         "mt-auto font-display text-xs tracking-widest font-bold uppercase transition-colors group-hover:text-white",
-                        pColor.text
+                        "text-primary"
                       )}
                     >
                       Explore Brands →
