@@ -65,7 +65,7 @@ export const Products: React.FC = () => {
       {/* Catalog Display - Exclusively Deep Dives */}
       <div className="flex flex-col">
         {displayedBrands.map((brand, index) => (
-          <div key={`${activeFilter}-${brand.name}`} className="mb-8">
+          <div key={`${activeFilter}-${brand.name}`} id={brand.name.replace(/\s+/g, '-')} className="mb-8 scroll-mt-32">
             {/* SECTION 1: Main Gear */}
             <section className="py-24 border-t border-white/5">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

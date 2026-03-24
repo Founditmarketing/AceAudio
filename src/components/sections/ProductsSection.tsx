@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Card } from '@/src/components/ui/Card';
-import { PRODUCT_SECTIONS } from '@/src/constants';
+import { PRODUCT_SECTIONS, BRANDS_DATA } from '@/src/constants';
 import * as Icons from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/src/lib/utils';
@@ -35,48 +35,65 @@ export const ProductsSection: React.FC = () => {
           </motion.p>
         </div>
 
-        {/* Product Categories Grid */}
-        <div className="flex flex-wrap justify-center gap-8">
-          {PRODUCT_SECTIONS.map((section, index) => {
-            const IconComponent = (Icons as any)[section.icon];
+        {/* Infinite Product Marquee */}
+        <div className="relative w-full overflow-hidden mt-12 py-8 group">
+          {/* Fading Edges */}
+          <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-bg-main to-transparent z-10 pointer-events-none" />
+          <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-bg-main to-transparent z-10 pointer-events-none" />
 
-            return (
-              <motion.div
-                key={section.id}
-                className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)]"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Link to={`/products/${section.id}`}>
-                  <Card 
-                    className="h-full flex flex-col items-center text-center p-10 group cursor-pointer"
-                    glowColor="primary"
-                  >
-                    <div className={cn(
-                      "w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-110",
-                      "bg-gradient-to-br from-primary/20 to-secondary/10 text-secondary"
-                    )}>
-                      {IconComponent && <IconComponent size={32} />}
+          {/* Marquee Track */}
+          <motion.div 
+            className="flex gap-6 w-max"
+            animate={{ x: [0, "-33.3333%"] }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
+            whileHover={{ animationPlayState: "paused" }}
+          >
+            {(() => {
+              const subs: { name: string, description: string, image: string, brandName: string }[] = [];
+              BRANDS_DATA.forEach(brand => {
+                if (brand.subcategories) {
+                  brand.subcategories.forEach(sub => subs.push({ ...sub, brandName: brand.name }));
+                }
+              });
+              // Triple the list to ensure seamless infinite scrolling loop
+              const tripleList = [...subs, ...subs, ...subs];
+
+              return tripleList.map((sub, index) => (
+                <Link 
+                  key={`${sub.name}-${index}`} 
+                  to={`/products?filter=all#${sub.brandName.replace(/\s+/g, '-')}`}
+                  className="w-72 flex-shrink-0 group/card block"
+                >
+                  <Card className="h-full flex flex-col bg-bg-panel/20 border-white/5 hover:border-primary/50 shadow-xl overflow-hidden transition-all duration-300 transform group-hover/card:scale-105 group-hover/card:-translate-y-2">
+                    <div className="h-40 overflow-hidden relative">
+                       {sub.image ? (
+                         <img 
+                           src={sub.image} 
+                           alt={sub.name} 
+                           className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110" 
+                           referrerPolicy="no-referrer"
+                         />
+                       ) : (
+                         <div className="w-full h-full bg-white/5 flex items-center justify-center">
+                           <span className="text-white/20 font-bold uppercase tracking-widest text-xs">No Image</span>
+                         </div>
+                       )}
+                       <div className="absolute top-2 right-2 bg-black/60 backdrop-blur-md px-2 py-1 rounded text-[10px] font-bold text-primary border border-primary/20 uppercase tracking-widest">
+                         {sub.brandName}
+                       </div>
                     </div>
-                    <h3 className={cn("text-2xl font-bold mb-4 transition-colors", "group-hover:text-primary")}>{section.title}</h3>
-                    <p className="text-white/60 text-sm leading-relaxed mb-8">
-                      {section.description}
-                    </p>
-                    <span 
-                      className={cn(
-                        "mt-auto font-display text-xs tracking-widest font-bold uppercase transition-colors group-hover:text-white",
-                        "text-primary"
-                      )}
-                    >
-                      Explore Brands →
-                    </span>
+                    <div className="p-6 flex flex-col flex-grow">
+                      <h4 className="text-lg font-bold mb-2 text-white group-hover/card:text-primary transition-colors line-clamp-1">{sub.name}</h4>
+                      <p className="text-white/60 text-xs leading-relaxed line-clamp-3 mb-4 flex-grow">{sub.description}</p>
+                      <span className="mt-auto font-display text-[10px] tracking-widest font-bold uppercase text-primary/70 group-hover/card:text-primary transition-colors flex items-center gap-1">
+                        View Product <Icons.ArrowRight size={10} />
+                      </span>
+                    </div>
                   </Card>
                 </Link>
-              </motion.div>
-            );
-          })}
+              ));
+            })()}
+          </motion.div>
         </div>
       </div>
     </section>
