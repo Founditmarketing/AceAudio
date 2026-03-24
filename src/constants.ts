@@ -26,8 +26,27 @@ export const BRANDS_DATA: Brand[] = [
   {
     name: "Kicker",
     logo: "https://aceaudioinc.com/wp-content/uploads/2021/03/b9dbd980082a744c0a2850396743f18b.jpeg",
-    description: "Make your sound larger than life with Kicker's mid-range speakers, car tweeters, and subwoofers. Since 1973, Kicker has provided excellent sound quality with remarkable performance.",
-    products: ["Subwoofers", "Speakers", "Amplifiers"]
+    description: "Make your sound larger than life with Kicker's mid-range speakers, car tweeters, and subwoofers.",
+    products: ["Subwoofers", "Speakers", "Amplifiers"],
+    image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Untitled-design-19.png",
+    mainBiography: "Make your sound larger than life with Kicker’s mid-range speakers, car tweeters, and subwoofers. Since 1973, Kicker has provided excellent sound quality with remarkable performance. We want to match the perfect Kicker speaker systems to your car and make both long and short drives more enjoyable.",
+    subcategories: [
+      {
+        name: "Amplifiers",
+        description: "Kicker Amplifiers will give you all the power and sound you need.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-19-at-11.45.19-AM-1.png"
+      },
+      {
+        name: "Subwoofers",
+        description: "Make your sound larger than life with Kicker subwoofers.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-19-at-12.41.05-PM-1.png"
+      },
+      {
+        name: "Speakers",
+        description: "Kicker Speakers give you excellent sound quality with remarkable performance.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-19-at-1.07.13-PM-1.png"
+      }
+    ]
   },
   {
     name: "Rockford Fosgate",
@@ -57,55 +76,158 @@ export const BRANDS_DATA: Brand[] = [
   {
     name: "Alpine",
     logo: "https://aceaudioinc.com/wp-content/uploads/2021/03/alpine-logo-vector-01-e1616022036711.png",
-    description: "For over four decades, the Alpine brand has been synonymous with premium sound quality and innovation. Explore the passion and dedication behind enhancing your drive.",
-    products: ["Sound Systems", "Amplifiers", "Subwoofers"]
+    description: "For over four decades, the Alpine brand has been synonymous with premium sound quality and innovation.",
+    products: ["Sound Systems", "Amplifiers", "Subwoofers"],
+    image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Untitled-design-20.png",
+    mainBiography: "For over four decades, the Alpine brand has been synonymous with premium sound quality and innovation. Explore the passion and dedication behind enhancing your drive. Make your drive your own! Our Alpine systems will bring your car to the 21st century by giving you the ultimate sound system.",
+    subcategories: [
+      {
+        name: "Sound Systems",
+        description: "Rise above the rest with Alpine Car play systems, the largest display on the market.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-12.49.01-PM-1.png"
+      },
+      {
+        name: "Amplifiers",
+        description: "No matter your system, Alpine amplifiers will deliver the power it takes to play your music.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-12.21.32-PM.png"
+      },
+      {
+        name: "Subwoofers",
+        description: "Our Alpine Subwoofers give you all the power and bass your system needs.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-12.38.16-PM.png"
+      }
+    ]
   },
   {
     name: "Kenwood",
     logo: "https://aceaudioinc.com/wp-content/uploads/2021/03/Kenwood_logo_logotype_wordmark.png",
-    description: "KENWOOD speakers are designed to meet the critical listening demands of the North American music lover. From speakers to amplifiers, Kenwood delivers quality.",
-    products: ["Speakers", "Amplifiers", "Subwoofers"]
+    description: "KENWOOD speakers are designed to meet the critical listening demands of the North American music lover.",
+    products: ["Speakers", "Amplifiers", "Subwoofers"],
+    image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Untitled-design-16.png",
+    mainBiography: "KENWOOD speakers are designed to meet the critical listening demands of the North American music lover. From speakers to amplifiers, Kenwood delivers quality. Take your ride to the next level with our awesome Kenwood products!",
+    subcategories: [
+      {
+        name: "Speakers",
+        description: "Speakers may be the most important piece of the sound quality puzzle. Our Kenwood speakers will give you the best sound quality.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-1.06.53-PM.png"
+      },
+      {
+        name: "Amplifiers",
+        description: "Kenwood Amplifiers deliver high quality sound combined with impressive power to ensure your audio systems reach their full potential.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-1.23.11-PM.png"
+      },
+      {
+        name: "Entertainment Systems",
+        description: "Enjoy convenient control of popular apps like Spotify and Pandora, built-in Bluetooth for hands-free calls and streaming music.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-1.27.25-PM.png"
+      }
+    ]
   },
   {
     name: "Pioneer",
     logo: "https://aceaudioinc.com/wp-content/uploads/2021/03/376510814PioneerLogo_medium.gif",
-    description: "Rated as one of the best sounding sound systems nowadays. Pioneer is a hallmark of good engineering and good sound with something for every budget.",
-    products: ["Speakers", "Amplifiers", "Entertainment Systems"]
+    description: "Rated as one of the best sounding sound systems nowadays. Pioneer is a hallmark of good engineering and good sound.",
+    products: ["Speakers", "Amplifiers", "Entertainment Systems"],
+    image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Untitled-design-17.png",
+    mainBiography: "Rated as one of the best sounding sound systems nowadays. Pioneer is a hallmark of good engineering and good sound with something for every budget. We want you to enjoy your ride more than ever by bringing Pioneer to your vehicle! Whatever vehicle you drive, we can make it sound and feel brand new.",
+    subcategories: [
+      {
+        name: "Speakers",
+        description: "Pioneer Speakers are designed to overachieve and to keep you relaxed on your journey.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-2.07.41-PM.png"
+      },
+      {
+        name: "Amplifiers",
+        description: "Our Pioneer amplifiers deliver high quality sound combined with impressive power.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-2.12.06-PM.png"
+      },
+      {
+        name: "Entertainment Systems",
+        description: "Pioneer digital media receivers are built specifically for CD-free digital music devotees.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-2.22.36-PM-1.png"
+      }
+    ]
   },
   {
     name: "Focal",
     logo: "https://aceaudioinc.com/wp-content/uploads/2021/03/focal.png",
     description: "We strive to create sound equipment that honors the artist's musical creation and empowers you to feel a new dimension of the music.",
-    products: ["Premium Speakers"]
+    products: ["Premium Speakers"],
+    image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Untitled-design-18.png",
+    mainBiography: "We strive to create sound equipment that honors the artist’s musical creation and empowers you to feel a new dimension of the music. We want every nuance to be revealed with precision and purity. With Focal, let the sound thrill your senses until you go beyond the usual perception of music and discover new fields of emotion. Focal has been creating benchmark acoustic equipment since 1979.",
+    subcategories: [
+      {
+        name: "Speakers",
+        description: "The music moves you. The new Focal speakers are designed to overachieve and to keep you relaxed on your journey.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-1.58.54-PM.png"
+      }
+    ]
   },
   {
     name: "Stinger",
     logo: "https://aceaudioinc.com/wp-content/uploads/2021/03/lighter.png",
-    description: "We design and engineer technology that makes your drive more fun. Built for audiophiles by audiophiles, our products span infotainment, audio upgrades, and installation accessories.",
-    products: ["Speakers", "Installation Accessories"]
+    description: "We design and engineer technology that makes your drive more fun. Built for audiophiles by audiophiles.",
+    products: ["Speakers", "Installation Accessories"],
+    image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Untitled-design-21.png",
+    mainBiography: "We design and engineer technology that makes your drive more fun. Built for audiophiles by audiophiles, our products span infotainment and radio upgrades, audio upgrades and all the installation accessories to make those enhancements easy. Stinger sets the bar for bad to the bone sound performance and is the go-to brand for car audio enthusiasts.",
+    subcategories: [
+      {
+        name: "Speakers",
+        description: "Our Stinger Speakers are Made to create an engrossing listening experience with detail and create unrivaled impact and tonality.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-2.33.18-PM.png"
+      }
+    ]
   },
   {
     name: "EchoMaster",
     logo: "https://aceaudioinc.com/wp-content/uploads/2021/03/EchoMaster_FullColour_TEAL_Updated3-7-19-copy.png",
     description: "Backup cameras and blindspot cameras provide a level of visibility that a simple rearview mirror can never approach.",
-    products: ["Audio Accessories", "Safety Systems"]
+    products: ["Audio Accessories", "Safety Systems"],
+    image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Untitled-design-22.png",
+    mainBiography: "Backup cameras and blindspot cameras provide a level of visibility that a simple rearview mirror can never approach by giving you a crystal clear view of what’s behind your car. Backing up and parking have never been safer than now. Our EchoMaster Backup Cameras will give you the feeling of safety, everytime you back up.",
+    subcategories: [
+      {
+        name: "Backup Cameras",
+        description: "Our EchoMaster Backup Cameras will give you the feeling of safety, everytime you back up.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-2.45.58-PM.png"
+      }
+    ]
   },
   {
     name: "Rhino Box",
     logo: "https://aceaudioinc.com/wp-content/uploads/2024/05/logo-1.png",
-    description: "Your home for the guaranteed best quality subwoofer enclosures. Made in America with great attention to detail, precision, and quality. Nothing hits harder than a Rhino.",
-    products: ["Carpeted Bass Boxes", "Poly Bass Boxes", "Accessories"]
+    description: "Your home for the guaranteed best quality subwoofer enclosures. Made in America with great attention to detail.",
+    products: ["Carpeted Bass Boxes", "Poly Bass Boxes", "Accessories"],
+    image: "https://aceaudioinc.com/wp-content/uploads/2024/05/Untitled-design-2024-05-10T120154.043.png",
+    mainBiography: "Welcome to Rhino Box, your home for the guaranteed best quality sub-woofer enclosures. We manufacture our sub-woofer enclosures at our state of the art facility in Houston, Texas, USA. Which means all of our products are made in America with great attention to detail, precision, and quality. All of our boxes are nailed, glued, and sealed again to insure durability and sound quality. 'Nothing hits harder than a Rhino.'",
+    subcategories: [
+      {
+        name: "Carpeted Bass Boxes",
+        description: "Experience the ultimate in car audio with Rhino Box carpeted bass boxes, meticulously engineered for unmatched performance and durability.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2024/05/DOG-227-CA.jpg"
+      },
+      {
+        name: "Poly Bass Boxes",
+        description: "Upgrade your car's audio system with Poly bass boxes, delivering crisp, clear sound and deep, powerful bass.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2024/05/vi.jpg"
+      },
+      {
+        name: "Accessories",
+        description: "Accessorize your ride with our range of premium bass box accessories, designed to enhance both style and functionality.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2024/05/SPACER.CA_.1.png"
+      }
+    ]
   },
   {
     name: "Heise",
     logo: "https://aceaudioinc.com/wp-content/uploads/2021/03/Heise-Logo-2.png",
-    description: "Our Heise LED headlight bulbs will outlast and outperform others on the market, shining 260% brighter than other LEDs to allow you to see even farther at night.",
+    description: "Our Heise LED headlight bulbs will outlast and outperform others on the market.",
     products: ["LED Headlights"]
   },
   {
     name: "Viper",
     logo: "https://aceaudioinc.com/wp-content/uploads/2021/03/Viper-Logo.png",
-    description: "Viper is the world's best selling vehicle security and remote start brand. We use cutting-edge technology to make sure you are in control.",
+    description: "Viper is the world's best selling vehicle security and remote start brand.",
     products: ["Remote Starts", "Security Systems"]
   }
 ];
