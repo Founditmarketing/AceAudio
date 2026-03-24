@@ -47,7 +47,7 @@ export const ProductCategory: React.FC = () => {
 
       {/* Brands Grid */}
       {/* Brands Display */}
-      {categoryId === 'audio' ? (
+      {['audio', 'headlights', 'remote-start'].includes(categoryId || '') ? (
         <div className="flex flex-col">
           {section.brands.map((brand, index) => (
              <div key={brand.name}>

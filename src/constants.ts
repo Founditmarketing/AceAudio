@@ -222,13 +222,31 @@ export const BRANDS_DATA: Brand[] = [
     name: "Heise",
     logo: "https://aceaudioinc.com/wp-content/uploads/2021/03/Heise-Logo-2.png",
     description: "Our Heise LED headlight bulbs will outlast and outperform others on the market.",
-    products: ["LED Headlights"]
+    products: ["LED Headlights"],
+    image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Untitled-design-26.png",
+    mainBiography: "Our Heise LED headlight bulbs will outlast and outperform others on the market, shining 260% brighter than other LEDs to allow you to see even farther at night. Heise LED Lighting offers a range of high quality aftermarket lighting options.",
+    subcategories: [
+      {
+        name: "LED Headlights",
+        description: "Check out our awesome LED headlights. They outlast and outperform others on the market.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-2.53.49-PM.png"
+      }
+    ]
   },
   {
     name: "Viper",
     logo: "https://aceaudioinc.com/wp-content/uploads/2021/03/Viper-Logo.png",
     description: "Viper is the world's best selling vehicle security and remote start brand.",
-    products: ["Remote Starts", "Security Systems"]
+    products: ["Remote Starts", "Security Systems"],
+    image: "https://aceaudioinc.com/wp-content/uploads/2021/03/unnamed-8.png",
+    mainBiography: "Viper is the world's best selling vehicle security and remote start brand. We use cutting-edge technology to make sure you are in control, bringing your vehicle up to speed with remote functionalities.",
+    subcategories: [
+      {
+        name: "Remote Starts",
+        description: "Are you tired of using your keys? Our Viper remote starts bring your vehicle up to speed with cutting-edge technology.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/4806v-1.png"
+      }
+    ]
   }
 ];
 
