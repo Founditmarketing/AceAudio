@@ -131,6 +131,12 @@ export const Navbar: React.FC = () => {
                     className="absolute top-full left-0 mt-2 w-64 glass-card p-4 border-primary/30 shadow-[0_0_20px_var(--shadow-glow-primary)]"
                   >
                     <div className="flex flex-col gap-2">
+                      <Link
+                        to="/products?filter=all"
+                        className="text-sm font-bold text-white hover:text-primary hover:translate-x-2 transition-all py-2 border-b border-white/5 uppercase"
+                      >
+                        All Products
+                      </Link>
                       {PRODUCT_SECTIONS.map((section) => (
                         <Link
                           key={section.id}
@@ -198,6 +204,12 @@ export const Navbar: React.FC = () => {
               <div className="pt-4 border-t border-white/10">
                 <p className="text-xs font-bold text-white/40 tracking-widest mb-4">PRODUCTS</p>
                 <div className="grid grid-cols-1 gap-4">
+                  <Link
+                    to="/products?filter=all"
+                    className="text-white font-bold hover:text-primary uppercase"
+                  >
+                    All Products
+                  </Link>
                   {PRODUCT_SECTIONS.map((section) => (
                     <Link
                       key={section.id}
