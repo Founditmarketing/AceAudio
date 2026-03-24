@@ -8,10 +8,10 @@ import { cn } from '@/src/lib/utils';
 
 export const ProductsSection: React.FC = () => {
   return (
-    <section id="products" className="py-24 bg-bg-dark relative overflow-hidden">
+    <section id="products" className="py-24 bg-bg-main relative overflow-hidden">
       {/* Background Glows */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-neon-cyan/5 rounded-full blur-[120px]" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-neon-magenta/5 rounded-full blur-[120px]" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[120px]" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-[120px]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
@@ -21,7 +21,7 @@ export const ProductsSection: React.FC = () => {
             viewport={{ once: true }}
             className="text-4xl sm:text-5xl font-black mb-4"
           >
-            OUR <span className="text-neon-cyan">PRODUCTS</span>
+            OUR <span className="text-primary">PRODUCTS</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -54,18 +54,18 @@ export const ProductsSection: React.FC = () => {
                   >
                     <div className={cn(
                       "w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-110",
-                      index % 2 === 0 ? "bg-neon-cyan/10 text-neon-cyan" : "bg-neon-magenta/10 text-neon-magenta"
+                      index % 2 === 0 ? "bg-primary/10 text-primary" : "bg-secondary/10 text-secondary"
                     )}>
                       {IconComponent && <IconComponent size={32} />}
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 group-hover:text-neon-cyan transition-colors">{section.title}</h3>
+                    <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">{section.title}</h3>
                     <p className="text-white/60 text-sm leading-relaxed mb-8">
                       {section.description}
                     </p>
                     <span 
                       className={cn(
                         "mt-auto font-display text-xs tracking-widest font-bold uppercase transition-colors",
-                        index % 2 === 0 ? "text-neon-cyan group-hover:text-white" : "text-neon-magenta group-hover:text-white"
+                        index % 2 === 0 ? "text-primary group-hover:text-white" : "text-secondary group-hover:text-white"
                       )}
                     >
                       Explore Brands →

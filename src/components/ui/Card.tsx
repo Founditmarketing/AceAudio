@@ -16,10 +16,10 @@ export const Card: React.FC<CardProps> = ({
   hover = true
 }) => {
   const glowStyles = {
-    cyan: "hover:border-neon-cyan/50 hover:shadow-[0_0_30px_rgba(0,255,255,0.15)]",
-    magenta: "hover:border-neon-magenta/50 hover:shadow-[0_0_30px_rgba(255,0,255,0.15)]",
-    purple: "hover:border-neon-purple/50 hover:shadow-[0_0_30px_rgba(139,92,246,0.15)]",
-    blue: "hover:border-neon-blue/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]"
+    cyan: "hover:border-primary/50 hover:shadow-[0_0_30px_var(--shadow-glow-primary)]",
+    magenta: "hover:border-secondary/50 hover:shadow-[0_0_30px_var(--shadow-glow-secondary)]",
+    purple: "hover:border-accent-1/50 hover:shadow-[0_0_30px_rgba(139,92,246,0.15)]",
+    blue: "hover:border-accent-2/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]"
   };
 
   return (

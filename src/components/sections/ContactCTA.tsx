@@ -14,7 +14,7 @@ export const ContactCTA: React.FC = () => {
           className="w-full h-full object-cover opacity-20"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-bg-dark via-bg-dark/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-bg-main via-bg-main/80 to-transparent" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -25,7 +25,7 @@ export const ContactCTA: React.FC = () => {
             viewport={{ once: true }}
             className="text-4xl sm:text-6xl font-black mb-6 leading-tight"
           >
-            READY TO <span className="text-neon-cyan">UPGRADE</span> YOUR DRIVE?
+            READY TO <span className="text-primary">UPGRADE</span> YOUR DRIVE?
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, x: -30 }}
@@ -55,7 +55,7 @@ export const ContactCTA: React.FC = () => {
       </div>
 
       {/* Decorative Wave */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-bg-dark to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-bg-main to-transparent pointer-events-none" />
     </section>
   );
 };

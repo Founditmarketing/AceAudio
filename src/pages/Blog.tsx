@@ -43,15 +43,15 @@ export const Blog: React.FC = () => {
   return (
     <div className="pt-24">
       {/* Hero */}
-      <section className="py-20 bg-bg-dark relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-neon-magenta/5 blur-[120px] -z-10" />
+      <section className="py-20 bg-bg-main relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/5 blur-[120px] -z-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl sm:text-7xl font-black mb-6"
           >
-            ACE AUDIO <span className="text-neon-magenta">BLOG</span>
+            ACE AUDIO <span className="text-secondary">BLOG</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -65,7 +65,7 @@ export const Blog: React.FC = () => {
       </section>
 
       {/* Blog Content */}
-      <section className="py-24 bg-bg-dark">
+      <section className="py-24 bg-bg-main">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12">
             {/* Posts Grid */}
@@ -88,17 +88,17 @@ export const Blog: React.FC = () => {
                       />
                     </div>
                     <div className="p-6 flex flex-col flex-grow">
-                      <div className="flex items-center gap-4 text-[10px] font-bold tracking-widest text-neon-magenta uppercase mb-4">
-                        <span className="bg-neon-magenta/10 px-2 py-1 rounded">{post.category}</span>
+                      <div className="flex items-center gap-4 text-[10px] font-bold tracking-widest text-secondary uppercase mb-4">
+                        <span className="bg-secondary/10 px-2 py-1 rounded">{post.category}</span>
                         <span className="text-white/40 flex items-center gap-1"><Calendar size={12} /> {post.date}</span>
                       </div>
-                      <h3 className="text-xl font-bold mb-4 group-hover:text-neon-magenta transition-colors leading-tight">
+                      <h3 className="text-xl font-bold mb-4 group-hover:text-secondary transition-colors leading-tight">
                         {post.title}
                       </h3>
                       <p className="text-white/60 text-sm mb-6 line-clamp-3">
                         {post.excerpt}
                       </p>
-                      <button className="mt-auto flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-white hover:text-neon-magenta transition-colors">
+                      <button className="mt-auto flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-white hover:text-secondary transition-colors">
                         Read More <ArrowRight size={14} />
                       </button>
                     </div>
@@ -116,7 +116,7 @@ export const Blog: React.FC = () => {
                   <input 
                     type="text" 
                     placeholder="Search keywords..." 
-                    className="w-full bg-white/5 border border-white/10 rounded-full py-3 px-6 text-sm focus:outline-none focus:border-neon-cyan transition-colors"
+                    className="w-full bg-white/5 border border-white/10 rounded-full py-3 px-6 text-sm focus:outline-none focus:border-primary transition-colors"
                   />
                   <Search size={18} className="absolute right-4 top-1/2 -translate-y-1/2 text-white/40" />
                 </div>
@@ -128,9 +128,9 @@ export const Blog: React.FC = () => {
                 <ul className="space-y-4">
                   {['Installation Tips', 'Product Reviews', 'Car Audio 101', 'News & Updates', 'Before & After'].map(cat => (
                     <li key={cat}>
-                      <button className="text-sm text-white/60 hover:text-neon-cyan transition-colors flex items-center justify-between w-full group">
+                      <button className="text-sm text-white/60 hover:text-primary transition-colors flex items-center justify-between w-full group">
                         {cat}
-                        <span className="text-[10px] bg-white/5 px-2 py-1 rounded group-hover:bg-neon-cyan/20 transition-colors">12</span>
+                        <span className="text-[10px] bg-white/5 px-2 py-1 rounded group-hover:bg-primary/20 transition-colors">12</span>
                       </button>
                     </li>
                   ))}
@@ -138,7 +138,7 @@ export const Blog: React.FC = () => {
               </Card>
 
               {/* Newsletter */}
-              <Card className="p-8 border-neon-cyan/30 bg-neon-cyan/5">
+              <Card className="p-8 border-primary/30 bg-primary/5">
                 <h4 className="font-display text-lg font-bold mb-4">STAY TUNED</h4>
                 <p className="text-sm text-white/60 mb-6">
                   Subscribe to our newsletter for the latest audio tips and exclusive offers.
@@ -146,7 +146,7 @@ export const Blog: React.FC = () => {
                 <input 
                   type="email" 
                   placeholder="Email address" 
-                  className="w-full bg-bg-dark border border-white/10 rounded-full py-3 px-6 text-sm mb-4 focus:outline-none focus:border-neon-cyan transition-colors"
+                  className="w-full bg-bg-main border border-white/10 rounded-full py-3 px-6 text-sm mb-4 focus:outline-none focus:border-primary transition-colors"
                 />
                 <Button className="w-full">Subscribe</Button>
               </Card>

@@ -7,7 +7,7 @@ export const BrandsCarousel: React.FC = () => {
   const brands = [...BRANDS_DATA, ...BRANDS_DATA];
 
   return (
-    <section className="py-20 bg-bg-dark/50 border-y border-white/5 overflow-hidden">
+    <section className="py-20 bg-bg-main/50 border-y border-white/5 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center">
         <h3 className="text-xs font-bold tracking-[0.5em] text-white/30 uppercase">WORLD-CLASS BRANDS WE TRUST</h3>
       </div>

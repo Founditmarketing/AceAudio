@@ -9,15 +9,15 @@ export const Reviews: React.FC = () => {
   return (
     <div className="pt-24">
       {/* Hero */}
-      <section className="py-20 bg-bg-dark relative overflow-hidden">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-neon-cyan/5 blur-[120px] -z-10" />
+      <section className="py-20 bg-bg-main relative overflow-hidden">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-primary/5 blur-[120px] -z-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl sm:text-7xl font-black mb-6"
           >
-            CUSTOMER <span className="text-neon-cyan">REVIEWS</span>
+            CUSTOMER <span className="text-primary">REVIEWS</span>
           </motion.h1>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ export const Reviews: React.FC = () => {
           >
             <div className="flex gap-2">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} size={24} className="fill-neon-cyan text-neon-cyan" />
+                <Star key={i} size={24} className="fill-primary text-primary" />
               ))}
             </div>
             <p className="text-xl text-white/60">
@@ -38,7 +38,7 @@ export const Reviews: React.FC = () => {
       </section>
 
       {/* Reviews Grid */}
-      <section className="py-24 bg-bg-dark">
+      <section className="py-24 bg-bg-main">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {REVIEWS_DATA.map((review, i) => (
@@ -49,11 +49,11 @@ export const Reviews: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
               >
-                <Card className="h-full relative pt-12 border-white/5 hover:border-neon-cyan/30">
-                  <Quote className="absolute top-6 left-6 text-neon-cyan/10 w-12 h-12" />
+                <Card className="h-full relative pt-12 border-white/5 hover:border-primary/30">
+                  <Quote className="absolute top-6 left-6 text-primary/10 w-12 h-12" />
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={14} className="fill-neon-cyan text-neon-cyan" />
+                      <Star key={i} size={14} className="fill-primary text-primary" />
                     ))}
                   </div>
                   <p className="text-white/80 italic mb-8 leading-relaxed">
@@ -64,7 +64,7 @@ export const Reviews: React.FC = () => {
                       <p className="font-display font-bold text-white">{review.name}</p>
                       <p className="text-[10px] text-white/40 uppercase tracking-widest">Google Reviewer</p>
                     </div>
-                    <ThumbsUp size={16} className="text-neon-cyan/40" />
+                    <ThumbsUp size={16} className="text-primary/40" />
                   </div>
                 </Card>
               </motion.div>

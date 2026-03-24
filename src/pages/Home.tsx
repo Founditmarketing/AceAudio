@@ -17,8 +17,8 @@ export const Home: React.FC = () => {
       <Hero />
       
       {/* Quick Contact Bar */}
-      <div className="bg-neon-cyan py-4 relative z-30">
-        <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-8 text-bg-dark font-display font-bold text-sm tracking-widest">
+      <div className="bg-primary py-4 relative z-30">
+        <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-center gap-8 text-bg-main font-display font-bold text-sm tracking-widest">
           <a href="tel:3184452406" className="flex items-center gap-2 hover:scale-105 transition-transform">
             CALL US: (318) 445-2406
           </a>
@@ -38,11 +38,11 @@ export const Home: React.FC = () => {
       <WhyChooseUs />
 
       {/* Reviews Preview */}
-      <section className="py-24 bg-bg-dark/50 overflow-hidden">
+      <section className="py-24 bg-bg-main/50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
             <div>
-              <h2 className="text-4xl font-black mb-4 uppercase">WHAT OUR <span className="text-neon-cyan">CUSTOMERS</span> SAY</h2>
+              <h2 className="text-4xl font-black mb-4 uppercase">WHAT OUR <span className="text-primary">CUSTOMERS</span> SAY</h2>
               <p className="text-white/60">Real feedback from real people in Central Louisiana.</p>
             </div>
             <Link to="/reviews">
@@ -60,17 +60,17 @@ export const Home: React.FC = () => {
                 transition={{ delay: i * 0.1 }}
               >
                 <Card className="h-full relative pt-12">
-                  <Quote className="absolute top-6 left-6 text-neon-cyan/20 w-12 h-12" />
+                  <Quote className="absolute top-6 left-6 text-primary/20 w-12 h-12" />
                   <div className="flex gap-1 mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={14} className="fill-neon-cyan text-neon-cyan" />
+                      <Star key={i} size={14} className="fill-primary text-primary" />
                     ))}
                   </div>
                   <p className="text-white/80 italic mb-6 leading-relaxed">
                     "{review.text}"
                   </p>
                   <div className="mt-auto">
-                    <p className="font-display font-bold text-neon-cyan">{review.name}</p>
+                    <p className="font-display font-bold text-primary">{review.name}</p>
                     <p className="text-xs text-white/40 uppercase tracking-widest">Verified Customer</p>
                   </div>
                 </Card>

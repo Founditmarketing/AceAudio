@@ -24,7 +24,7 @@ export const EqualizerBars: React.FC = () => {
       {bars.map((height, i) => (
         <motion.div
           key={i}
-          className="w-2 sm:w-3 md:w-4 bg-gradient-to-t from-neon-cyan via-neon-magenta to-neon-purple rounded-t-full"
+          className="w-2 sm:w-3 md:w-4 bg-gradient-to-t from-primary via-secondary to-accent-1 rounded-t-full"
           animate={{ height: `${height}%` }}
           transition={{ duration: 0.2, ease: "easeInOut" }}
         />

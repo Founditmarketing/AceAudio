@@ -8,15 +8,15 @@ export const Contact: React.FC = () => {
   return (
     <div className="pt-24">
       {/* Hero */}
-      <section className="py-20 bg-bg-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-neon-blue/5 blur-[120px] -z-10" />
+      <section className="py-20 bg-bg-main relative overflow-hidden">
+        <div className="absolute inset-0 bg-accent-2/5 blur-[120px] -z-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl sm:text-7xl font-black mb-6"
           >
-            CONTACT <span className="text-neon-blue">US</span>
+            CONTACT <span className="text-accent-2">US</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -30,7 +30,7 @@ export const Contact: React.FC = () => {
       </section>
 
       {/* Contact Content */}
-      <section className="py-24 bg-bg-dark">
+      <section className="py-24 bg-bg-main">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Info */}
@@ -41,7 +41,7 @@ export const Contact: React.FC = () => {
               className="space-y-12"
             >
               <div>
-                <h2 className="text-3xl font-black mb-8 uppercase tracking-tight">GET IN <span className="text-neon-blue">TOUCH</span></h2>
+                <h2 className="text-3xl font-black mb-8 uppercase tracking-tight">GET IN <span className="text-accent-2">TOUCH</span></h2>
                 <p className="text-white/60 text-lg leading-relaxed mb-8">
                   Contact us today to get started! Don't wait to get your sound system fixed or upgraded. 
                   Schedule an appointment with us to get the equipment that's right for you.
@@ -50,27 +50,27 @@ export const Contact: React.FC = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-neon-blue/10 flex items-center justify-center text-neon-blue shrink-0">
+                  <div className="w-12 h-12 rounded-2xl bg-accent-2/10 flex items-center justify-center text-accent-2 shrink-0">
                     <Phone size={24} />
                   </div>
                   <div>
                     <p className="text-xs font-bold text-white/40 uppercase tracking-widest mb-1">Phone</p>
-                    <a href="tel:3184452406" className="text-lg font-bold hover:text-neon-blue transition-colors">(318) 445-2406</a>
+                    <a href="tel:3184452406" className="text-lg font-bold hover:text-accent-2 transition-colors">(318) 445-2406</a>
                   </div>
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-neon-magenta/10 flex items-center justify-center text-neon-magenta shrink-0">
+                  <div className="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
                     <Mail size={24} />
                   </div>
                   <div>
                     <p className="text-xs font-bold text-white/40 uppercase tracking-widest mb-1">Email</p>
-                    <a href="mailto:Ace_audioinc@yahoo.com" className="text-lg font-bold hover:text-neon-magenta transition-colors">Ace_audioinc@yahoo.com</a>
+                    <a href="mailto:Ace_audioinc@yahoo.com" className="text-lg font-bold hover:text-secondary transition-colors">Ace_audioinc@yahoo.com</a>
                   </div>
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-neon-cyan/10 flex items-center justify-center text-neon-cyan shrink-0">
+                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary shrink-0">
                     <MapPin size={24} />
                   </div>
                   <div>
@@ -80,7 +80,7 @@ export const Contact: React.FC = () => {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-neon-purple/10 flex items-center justify-center text-neon-purple shrink-0">
+                  <div className="w-12 h-12 rounded-2xl bg-accent-1/10 flex items-center justify-center text-accent-1 shrink-0">
                     <Clock size={24} />
                   </div>
                   <div>
@@ -100,7 +100,7 @@ export const Contact: React.FC = () => {
                   href="https://www.facebook.com/Ace-Audio-142129128095" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 glass-card px-6 py-3 border-neon-blue/30 hover:bg-neon-blue hover:text-bg-dark transition-all group"
+                  className="inline-flex items-center gap-3 glass-card px-6 py-3 border-accent-2/30 hover:bg-accent-2 hover:text-bg-main transition-all group"
                 >
                   <Facebook size={20} />
                   <span className="font-bold tracking-widest">FACEBOOK</span>
@@ -122,7 +122,7 @@ export const Contact: React.FC = () => {
                       <input 
                         type="text" 
                         required
-                        className="w-full bg-white/5 border border-white/10 rounded-full py-4 px-6 focus:outline-none focus:border-neon-blue transition-colors"
+                        className="w-full bg-white/5 border border-white/10 rounded-full py-4 px-6 focus:outline-none focus:border-accent-2 transition-colors"
                         placeholder="Your Name"
                       />
                     </div>
@@ -131,7 +131,7 @@ export const Contact: React.FC = () => {
                       <input 
                         type="tel" 
                         required
-                        className="w-full bg-white/5 border border-white/10 rounded-full py-4 px-6 focus:outline-none focus:border-neon-blue transition-colors"
+                        className="w-full bg-white/5 border border-white/10 rounded-full py-4 px-6 focus:outline-none focus:border-accent-2 transition-colors"
                         placeholder="(318) 000-0000"
                       />
                     </div>
@@ -141,7 +141,7 @@ export const Contact: React.FC = () => {
                     <input 
                       type="email" 
                       required
-                      className="w-full bg-white/5 border border-white/10 rounded-full py-4 px-6 focus:outline-none focus:border-neon-blue transition-colors"
+                      className="w-full bg-white/5 border border-white/10 rounded-full py-4 px-6 focus:outline-none focus:border-accent-2 transition-colors"
                       placeholder="email@example.com"
                     />
                   </div>
@@ -150,7 +150,7 @@ export const Contact: React.FC = () => {
                     <textarea 
                       rows={5}
                       required
-                      className="w-full bg-white/5 border border-white/10 rounded-3xl py-4 px-6 focus:outline-none focus:border-neon-blue transition-colors resize-none"
+                      className="w-full bg-white/5 border border-white/10 rounded-3xl py-4 px-6 focus:outline-none focus:border-accent-2 transition-colors resize-none"
                       placeholder="How can we help you?"
                     />
                   </div>
@@ -167,16 +167,16 @@ export const Contact: React.FC = () => {
       </section>
 
       {/* Map Placeholder */}
-      <section className="h-[400px] w-full bg-bg-card relative overflow-hidden">
+      <section className="h-[400px] w-full bg-bg-panel relative overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center">
-            <MapPin size={48} className="text-neon-blue mx-auto mb-4 animate-bounce" />
+            <MapPin size={48} className="text-accent-2 mx-auto mb-4 animate-bounce" />
             <p className="font-display font-bold text-xl tracking-widest">ALEXANDRIA, LA</p>
             <p className="text-white/40">1718 Metro Dr.</p>
           </div>
         </div>
         {/* Decorative Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-bg-dark via-transparent to-bg-dark pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-bg-main via-transparent to-bg-main pointer-events-none" />
       </section>
     </div>
   );

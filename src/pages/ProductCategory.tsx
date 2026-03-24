@@ -18,12 +18,12 @@ export const ProductCategory: React.FC = () => {
   return (
     <div className="pt-24">
       {/* Hero */}
-      <section className="py-20 bg-bg-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-neon-cyan/5 blur-[120px] -z-10" />
+      <section className="py-20 bg-bg-main relative overflow-hidden">
+        <div className="absolute inset-0 bg-primary/5 blur-[120px] -z-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link 
             to="/" 
-            className="inline-flex items-center gap-2 text-white/40 hover:text-neon-cyan transition-colors mb-8 font-display text-xs tracking-widest uppercase"
+            className="inline-flex items-center gap-2 text-white/40 hover:text-primary transition-colors mb-8 font-display text-xs tracking-widest uppercase"
           >
             <ArrowLeft size={16} /> Back to Home
           </Link>
@@ -32,7 +32,7 @@ export const ProductCategory: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl sm:text-7xl font-black mb-6 uppercase"
           >
-            {section.title.split(' ')[0]} <span className="text-neon-cyan">{section.title.split(' ').slice(1).join(' ')}</span>
+            {section.title.split(' ')[0]} <span className="text-primary">{section.title.split(' ').slice(1).join(' ')}</span>
           </motion.h1 >
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -46,7 +46,7 @@ export const ProductCategory: React.FC = () => {
       </section>
 
       {/* Brands Grid */}
-      <section className="py-24 bg-bg-dark">
+      <section className="py-24 bg-bg-main">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {section.brands.map((brand, index) => (
@@ -57,7 +57,7 @@ export const ProductCategory: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
               >
-                <Card className="h-full flex flex-col bg-bg-card/20 border-white/5 hover:border-white/20">
+                <Card className="h-full flex flex-col bg-bg-panel/20 border-white/5 hover:border-white/20">
                   <div className="h-32 flex items-center justify-center mb-6 p-4 bg-white/5 rounded-xl overflow-hidden">
                     <img 
                       src={brand.logo} 
@@ -66,7 +66,7 @@ export const ProductCategory: React.FC = () => {
                       referrerPolicy="no-referrer"
                     />
                   </div>
-                  <h2 className="text-2xl font-bold mb-3 text-neon-cyan">{brand.name}</h2>
+                  <h2 className="text-2xl font-bold mb-3 text-primary">{brand.name}</h2>
                   <p className="text-white/60 text-sm leading-relaxed mb-6 flex-grow">
                     {brand.description}
                   </p>

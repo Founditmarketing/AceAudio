@@ -7,7 +7,7 @@ export const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-bg-dark via-bg-dark/80 to-bg-dark z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-bg-main via-bg-main/80 to-bg-main z-10" />
       
       {/* Animated EQ Bars */}
       <EqualizerBars />
@@ -20,7 +20,7 @@ export const Hero: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <motion.p 
-            className="text-neon-cyan font-accent tracking-[0.3em] text-sm sm:text-base mb-4 uppercase"
+            className="text-primary font-accent tracking-[0.3em] text-sm sm:text-base mb-4 uppercase"
             animate={{ opacity: [0.5, 1, 0.5] }}
             transition={{ duration: 3, repeat: Infinity }}
           >
@@ -29,7 +29,7 @@ export const Hero: React.FC = () => {
           
           <h1 className="text-5xl sm:text-7xl md:text-8xl font-black mb-6 leading-tight">
             <span className="block text-white">FEEL THE</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan via-neon-magenta to-neon-purple text-glow-cyan">MUSIC</span>
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent-1 text-glow-primary">MUSIC</span>
           </h1>
           
           <p className="max-w-2xl mx-auto text-white/70 text-lg sm:text-xl mb-10 leading-relaxed font-light">
@@ -54,11 +54,11 @@ export const Hero: React.FC = () => {
           </div>
 
           <motion.div 
-            className="mt-16 inline-block glass-card px-6 py-3 border-neon-magenta/30"
+            className="mt-16 inline-block glass-card px-6 py-3 border-secondary/30"
             animate={{ scale: [1, 1.02, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <p className="text-neon-magenta font-display font-bold italic tracking-widest">
+            <p className="text-secondary font-display font-bold italic tracking-widest">
               "If you can't Crank it, Yank it."
             </p>
           </motion.div>
@@ -72,7 +72,7 @@ export const Hero: React.FC = () => {
         transition={{ duration: 2, repeat: Infinity }}
       >
         <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center pt-2">
-          <div className="w-1 h-2 bg-neon-cyan rounded-full" />
+          <div className="w-1 h-2 bg-primary rounded-full" />
         </div>
       </motion.div>
     </section>

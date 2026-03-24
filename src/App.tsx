@@ -58,7 +58,7 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen flex flex-col bg-bg-dark selection:bg-neon-cyan/30">
+      <div className="min-h-screen flex flex-col bg-bg-main selection:bg-primary/30">
         <Navbar />
         <main className="flex-grow">
           <AnimatedRoutes />

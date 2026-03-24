@@ -44,11 +44,11 @@ export const WhyChooseUs: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-bg-dark relative">
+    <section className="py-24 bg-bg-main relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-black mb-4">WHY CHOOSE <span className="text-neon-magenta">ACE AUDIO</span></h2>
-          <div className="w-24 h-1 bg-neon-magenta mx-auto rounded-full" />
+          <h2 className="text-4xl font-black mb-4">WHY CHOOSE <span className="text-secondary">ACE AUDIO</span></h2>
+          <div className="w-24 h-1 bg-secondary mx-auto rounded-full" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
