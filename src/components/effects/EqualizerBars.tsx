@@ -21,8 +21,8 @@ export const EqualizerBars: React.FC = () => {
         const center = 17;
         const distFromCenter = Math.abs(i - center);
         
-        // Base Gaussian curve keeps the middle looking higher
-        const baseCurve = Math.max(10, 80 - (distFromCenter * 4));
+        // Base Gaussian curve keeps the middle looking higher, widened spread
+        const baseCurve = Math.max(10, 80 - (distFromCenter * 2.5));
         
         let height = 0;
         if (isPulse) {
@@ -45,9 +45,9 @@ export const EqualizerBars: React.FC = () => {
       {bars.map((height, i) => (
         <motion.div
           key={i}
-          className="w-3 sm:w-4 md:w-5 bg-gradient-to-t from-primary via-accent-2 to-secondary rounded-t-full shadow-[0_0_10px_var(--shadow-glow-primary)]"
+          className="w-4 sm:w-5 md:w-6 bg-gradient-to-t from-primary via-accent-2 to-secondary rounded-t-full shadow-[0_0_10px_var(--shadow-glow-primary)]"
           animate={{ height: `${height}%` }}
-          transition={{ duration: 0.1, ease: "easeOut" }}
+          transition={{ duration: 0.25, ease: "easeInOut" }}
         />
       ))}
     </div>
