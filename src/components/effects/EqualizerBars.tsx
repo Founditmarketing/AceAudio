@@ -58,7 +58,7 @@ export const EqualizerBars: React.FC = () => {
           key={i}
           className="w-4 sm:w-5 md:w-6 bg-gradient-to-t from-primary via-accent-2 to-secondary rounded-t-full shadow-[0_0_10px_var(--shadow-glow-primary)]"
           animate={{ height: `${height}%` }}
-          transition={{ duration: 0.15, ease: "easeOut" }}
+          transition={{ duration: 0.25, ease: "easeInOut" }}
         />
       ))}
     </div>
