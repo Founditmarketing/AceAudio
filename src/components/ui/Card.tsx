@@ -8,10 +8,12 @@ interface CardProps {
   glowColor?: 'primary' | 'secondary' | 'accent1' | 'accent2';
   hover?: boolean;
 }
-
 export const Card: React.FC<CardProps> = ({ 
   children, 
   className, 
+  glowColor = 'primary',
+  hover = true
+}) => {
   const glowStyles = {
     primary: "hover:border-primary/50 hover:shadow-[0_0_30px_var(--shadow-glow-primary)]",
     secondary: "hover:border-secondary/50 hover:shadow-[0_0_30px_var(--shadow-glow-secondary)]",
