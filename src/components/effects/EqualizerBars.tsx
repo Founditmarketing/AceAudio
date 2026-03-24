@@ -9,35 +9,44 @@ export const EqualizerBars: React.FC = () => {
     const initialBars = Array.from({ length: 35 }, () => 10);
     setBars(initialBars);
 
-    let time = 0;
-    
+    let step = 0;
+    // Rhythmic pattern: pulse, break, break, pulse, pulse, break, pulse, break
+    const pattern = [1, 0, 0, 1, 1, 0, 1, 0];
+    let currentPeak = 17; // Start at center
+
     const interval = setInterval(() => {
-      time += 0.15; // Speed of the wave
-      
+      const isPulse = pattern[step % pattern.length] === 1;
+      step++;
+
+      if (isPulse) {
+        // Choose new peak heavily weighted to center
+        // Averaging 3 random numbers approximates a normal/Gaussian distribution centered around 0.5
+        const rand = (Math.random() + Math.random() + Math.random()) / 3; 
+        currentPeak = Math.floor(rand * 34); 
+      }
+
       setBars(() => Array.from({ length: 35 }, (_, i) => {
-        // The peak wanders left and right smoothly using overlapping sine waves
-        const wander = Math.sin(time * 0.7) * 8 + Math.cos(time * 0.3) * 5;
-        const peakIndex = 17 + wander;
+        // Distance from this bar to the current dynamic peak
+        const distFromPeak = Math.abs(i - currentPeak);
         
-        // Distance from this bar to the current moving peak
-        const dist = Math.abs(i - peakIndex);
+        // Shape of the wave (variance controls how wide the hit is)
+        const variance = 12; 
+        const shape = Math.exp(-(distFromPeak * distFromPeak) / variance);
         
-        // Width of the wave (variance) 
-        const variance = 15; 
+        let height = 0;
+        if (isPulse) {
+          // Sharp attack at the new location
+          const maxVol = 60 + (Math.random() * 40); 
+          height = (shape * maxVol) + (Math.random() * 10);
+        } else {
+          // Quick break: drop significantly but retain the visual shape
+          const maxVol = 20 + (Math.random() * 10);
+          height = Math.max(5, (shape * maxVol) + (Math.random() * 5));
+        }
         
-        // True Gaussian bell curve shape: e^(-x^2 / variance)
-        const shape = Math.exp(-(dist * dist) / variance);
-        
-        // The overall volume/height pulses smoothly
-        const volumeBounce = Math.sin(time * 1.5);
-        const maxVol = 60 + (volumeBounce * 40); 
-        
-        // Tiny flutter so it feels like live audio, but minimal for smoothness
-        const flutter = Math.random() * 5;
-        
-        return Math.max(5, Math.min(100, (shape * maxVol) + flutter));
+        return Math.min(100, height);
       }));
-    }, 100);
+    }, 130);
 
     return () => clearInterval(interval);
   }, []);
@@ -49,7 +58,7 @@ export const EqualizerBars: React.FC = () => {
           key={i}
           className="w-4 sm:w-5 md:w-6 bg-gradient-to-t from-primary via-accent-2 to-secondary rounded-t-full shadow-[0_0_10px_var(--shadow-glow-primary)]"
           animate={{ height: `${height}%` }}
-          transition={{ duration: 0.1, ease: "linear" }}
+          transition={{ duration: 0.1, ease: "easeOut" }}
         />
       ))}
     </div>
