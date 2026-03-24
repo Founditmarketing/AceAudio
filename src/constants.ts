@@ -34,19 +34,23 @@ export const BRANDS_DATA: Brand[] = [
     logo: "https://aceaudioinc.com/wp-content/uploads/2021/03/bafa9748d2658073a6b7e2b97229d08b.png",
     description: "Car audio for Sedans, Coupes, SUVs, and Trucks. Lifted or lowered. Rockford Fosgate audio ensures the experience is performance-driven – just like your ride.",
     products: ["Amplifiers", "Speakers", "Subwoofers"],
+    image: "https://aceaudioinc.com/wp-content/uploads/2021/03/P2D2-12_1_m.png",
     mainBiography: "Get Power series sound quality in a drop-in speaker. These full-range speakers inherit all the coolest features from their big brother component systems. Be prepared, these are more than OEM replacement speakers, their sound quality has been perfected for true Rockford Fosgate fanatics! Our subwoofer incorporates technologies never before seen in car audio, like the Injection Molded Foam Surround, making the foam strong and durable like a rubberized material. The Edge Wound voice coil allows the windings to be very close with no air gaps so it stays cool for high power handling capacity. We also engineered a very efficient “Push/Pull” voice coil design with a huge Neodymium magnet for a very efficient motor assembly. We have a full-range speaker rated at 100 Watts RMS designed as a high-powered OEM replacement perfected for sound quality. Speakers include grilles, integrated concealed crossovers, and mounting hardware.",
     subcategories: [
       {
         name: "Amplifiers",
-        description: "Unleash the beast in your system. RF amps bring out all the potential in your speakers and subs."
+        description: "Unleash the beast in your system. RF amps bring out all the potential in your speakers and subs.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-19-at-1.19.18-PM.png"
       },
       {
         name: "Speakers",
-        description: "The music moves you. RF speakers are designed to overachieve and to take you on your journey."
+        description: "The music moves you. RF speakers are designed to overachieve and to take you on your journey.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-19-at-1.19.45-PM.png"
       },
       {
         name: "Subwoofers",
-        description: "Bass, how low can you go? Everyone will know it’s you from blocks away with RF subs in your ride."
+        description: "Bass, how low can you go? Everyone will know it’s you from blocks away with RF subs in your ride.",
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-19-at-1.22.34-PM.png"
       }
     ]
   },
