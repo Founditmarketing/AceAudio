@@ -52,11 +52,11 @@ export const EqualizerBars: React.FC = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0 flex items-end justify-center gap-[2px] sm:gap-1 overflow-hidden pointer-events-none opacity-60">
+    <div className="absolute inset-0 flex items-end justify-center gap-[2px] sm:gap-1 overflow-hidden pointer-events-none opacity-100 mix-blend-screen">
       {bars.map((height, i) => (
         <motion.div
           key={i}
-          className="w-4 sm:w-5 md:w-6 bg-gradient-to-t from-primary via-accent-2 to-secondary rounded-t-full shadow-[0_0_10px_var(--shadow-glow-primary)]"
+          className="w-4 sm:w-5 md:w-6 bg-gradient-to-t from-primary via-accent-2 to-secondary rounded-t-full shadow-[0_0_15px_var(--shadow-glow-primary)] brightness-125"
           animate={{ height: `${height}%` }}
           transition={{ duration: 0.35, ease: "linear" }}
         />
