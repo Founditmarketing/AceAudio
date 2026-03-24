@@ -166,17 +166,21 @@ export const Contact: React.FC = () => {
         </div>
       </section>
 
-      {/* Map Placeholder */}
-      <section className="h-[400px] w-full bg-bg-panel relative overflow-hidden">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center">
-            <MapPin size={48} className="text-accent-2 mx-auto mb-4 animate-bounce" />
-            <p className="font-display font-bold text-xl tracking-widest">ALEXANDRIA, LA</p>
-            <p className="text-white/40">1718 Metro Dr.</p>
-          </div>
-        </div>
+      {/* Location Map */}
+      <section className="h-[400px] w-full relative">
+        <iframe
+          src="https://maps.google.com/maps?q=1718%20Metro%20Dr.%20Alexandria,%20LA&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          className="opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-700"
+        />
         {/* Decorative Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-bg-main via-transparent to-bg-main pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-bg-main to-transparent h-16 pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-bg-main to-transparent h-16 pointer-events-none" />
       </section>
     </div>
   );

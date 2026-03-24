@@ -5,7 +5,7 @@ import { Footer } from './components/layout/Footer';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Reviews } from './pages/Reviews';
-import { Blog } from './pages/Blog';
+
 import { Contact } from './pages/Contact';
 import { Products } from './pages/Products';
 import { AnimatePresence, motion } from 'motion/react';
@@ -45,7 +45,7 @@ function AnimatedRoutes() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/reviews" element={<Reviews />} />
-          <Route path="/blog" element={<Blog />} />
+
           <Route path="/contact" element={<Contact />} />
           <Route path="/products" element={<Products />} />
         </Routes>
