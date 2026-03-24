@@ -9,33 +9,35 @@ export const EqualizerBars: React.FC = () => {
     const initialBars = Array.from({ length: 35 }, () => 10);
     setBars(initialBars);
 
-    let step = 0;
-    // Rhythmic pattern: pulse, break, break, pulse, pulse, break, pulse, break
-    const pattern = [1, 0, 0, 1, 1, 0, 1, 0];
-
+    let time = 0;
+    
     const interval = setInterval(() => {
-      const isPulse = pattern[step % pattern.length] === 1;
-      step++;
-
+      time += 0.15; // Speed of the wave
+      
       setBars(() => Array.from({ length: 35 }, (_, i) => {
-        const center = 17;
-        const distFromCenter = Math.abs(i - center);
+        // The peak wanders left and right smoothly using overlapping sine waves
+        const wander = Math.sin(time * 0.7) * 8 + Math.cos(time * 0.3) * 5;
+        const peakIndex = 17 + wander;
         
-        // Base Gaussian curve keeps the middle looking higher, widened spread
-        const baseCurve = Math.max(10, 80 - (distFromCenter * 2.5));
+        // Distance from this bar to the current moving peak
+        const dist = Math.abs(i - peakIndex);
         
-        let height = 0;
-        if (isPulse) {
-          // Sharp attack: use full curve plus random jump
-          height = baseCurve + (Math.random() * 20);
-        } else {
-          // Quick break: drop significantly but retain shape
-          height = Math.max(5, baseCurve * 0.25 + (Math.random() * 5));
-        }
+        // Width of the wave (variance) 
+        const variance = 15; 
         
-        return Math.min(100, height);
+        // True Gaussian bell curve shape: e^(-x^2 / variance)
+        const shape = Math.exp(-(dist * dist) / variance);
+        
+        // The overall volume/height pulses smoothly
+        const volumeBounce = Math.sin(time * 1.5);
+        const maxVol = 60 + (volumeBounce * 40); 
+        
+        // Tiny flutter so it feels like live audio, but minimal for smoothness
+        const flutter = Math.random() * 5;
+        
+        return Math.max(5, Math.min(100, (shape * maxVol) + flutter));
       }));
-    }, 130);
+    }, 100);
 
     return () => clearInterval(interval);
   }, []);
@@ -47,7 +49,7 @@ export const EqualizerBars: React.FC = () => {
           key={i}
           className="w-4 sm:w-5 md:w-6 bg-gradient-to-t from-primary via-accent-2 to-secondary rounded-t-full shadow-[0_0_10px_var(--shadow-glow-primary)]"
           animate={{ height: `${height}%` }}
-          transition={{ duration: 0.25, ease: "easeInOut" }}
+          transition={{ duration: 0.1, ease: "linear" }}
         />
       ))}
     </div>
