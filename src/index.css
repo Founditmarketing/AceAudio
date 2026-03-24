@@ -3,26 +3,26 @@
 
 @layer base {
   :root {
-    /* Fire Theme (Default) */
+    /* Fire Theme (Default) - SOLAR FLARE! */
     --color-bg-main: #0A0A0A;
     --color-bg-panel: #120A0A;
     
-    --color-primary: #FF0000;
+    --color-primary: #FF6600; /* Aggressive orange */
     --color-primary-fire: #FF3300;
     --color-primary-orange: #FF6600;
     --color-primary-amber: #FF9900;
     --color-primary-gold: #FFCC00;
     
-    --color-secondary: #FF1A1A;
+    --color-secondary: #FFCC00; /* Electric gold */
     --color-secondary-orange: #FF4D00;
     --color-secondary-gold: #FFB300;
     
-    --color-accent-1: #FF3300;
-    --color-accent-2: #FF6600;
-    --color-accent-3: #FF9900;
+    --color-accent-1: #FF0000; /* Pure neon red */
+    --color-accent-2: #FF9900; /* Hot amber */
+    --color-accent-3: #FF3300; /* Red-orange fire */
     
-    --shadow-glow-primary: rgba(255, 0, 0, 0.3);
-    --shadow-glow-secondary: rgba(255, 26, 26, 0.3);
+    --shadow-glow-primary: rgba(255, 102, 0, 0.4);
+    --shadow-glow-secondary: rgba(255, 204, 0, 0.4);
   }
 
   /* Original Cyberpunk Theme */
