@@ -45,7 +45,7 @@ export const ProductsSection: React.FC = () => {
           <motion.div 
             className="flex gap-6 w-max"
             animate={{ x: [0, "-33.3333%"] }}
-            transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
+            transition={{ repeat: Infinity, ease: "linear", duration: 150 }}
             whileHover={{ animationPlayState: "paused" }}
           >
             {(() => {
