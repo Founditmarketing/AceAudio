@@ -3,26 +3,27 @@
 
 @layer base {
   :root {
-    /* Fire Theme (Default) - SOLAR FLARE! */
-    --color-bg-main: #0A0A0A;
-    --color-bg-panel: #120A0A;
+    /* Crimson Voltage Theme (Default) */
+    --color-bg-main: #0D0A0B;
+    --color-bg-panel: #120A0C;
     
-    --color-primary: #FF6600; /* Aggressive orange */
-    --color-primary-fire: #FF3300;
-    --color-primary-orange: #FF6600;
-    --color-primary-amber: #FF9900;
-    --color-primary-gold: #FFCC00;
+    --color-primary: #FF0066; /* Hot pink-red */
+    --color-primary-crimson: #FF0040;
+    --color-primary-coral: #FF3366;
+    --color-primary-salmon: #FF6680;
+    --color-primary-blood: #FF0033;
     
-    --color-secondary: #FFCC00; /* Electric gold */
-    --color-secondary-orange: #FF4D00;
-    --color-secondary-gold: #FFB300;
+    --color-secondary: #FF3366; /* Neon coral */
+    --color-secondary-rose: #FF1A5C;
+    --color-secondary-coral: #FF4D7A;
+    --color-secondary-crimson: #CC0033;
     
-    --color-accent-1: #FF0000; /* Pure neon red */
-    --color-accent-2: #FF9900; /* Hot amber */
-    --color-accent-3: #FF3300; /* Red-orange fire */
+    --color-accent-1: #FF0040; /* Electric crimson */
+    --color-accent-2: #FF1A5C; /* Vibrant rose */
+    --color-accent-3: #CC0033; /* Deep crimson */
     
-    --shadow-glow-primary: rgba(255, 102, 0, 0.4);
-    --shadow-glow-secondary: rgba(255, 204, 0, 0.4);
+    --shadow-glow-primary: rgba(255, 0, 102, 0.4);
+    --shadow-glow-secondary: rgba(255, 51, 102, 0.4);
   }
 
   /* Original Cyberpunk Theme */
