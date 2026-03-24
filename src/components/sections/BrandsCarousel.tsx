@@ -23,11 +23,14 @@ export const BrandsCarousel: React.FC = () => {
           }}
         >
           {brands.map((brand, i) => (
-            <div key={i} className="flex-shrink-0 group">
+            <div 
+              key={i} 
+              className="flex-shrink-0 group bg-white/90 hover:bg-white rounded-2xl px-8 py-4 flex items-center justify-center transition-all duration-500 hover:shadow-[0_0_20px_var(--shadow-glow-primary)] border border-transparent hover:border-primary/30"
+            >
               <img 
                 src={brand.logo} 
                 alt={brand.name} 
-                className="h-12 sm:h-16 w-auto object-contain filter grayscale brightness-200 opacity-30 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                className="h-10 sm:h-14 w-auto object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 mix-blend-multiply"
                 referrerPolicy="no-referrer"
               />
             </div>
