@@ -28,23 +28,23 @@ export const BRANDS_DATA: Brand[] = [
     logo: "https://aceaudioinc.com/wp-content/uploads/2021/03/b9dbd980082a744c0a2850396743f18b.jpeg",
     description: "Make your sound larger than life with Kicker's mid-range speakers, car tweeters, and subwoofers.",
     products: ["Subwoofers", "Speakers", "Amplifiers"],
-    image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Untitled-design-19.png",
+    image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Untitled-1.png",
     mainBiography: "Make your sound larger than life with Kicker’s mid-range speakers, car tweeters, and subwoofers. Since 1973, Kicker has provided excellent sound quality with remarkable performance. We want to match the perfect Kicker speaker systems to your car and make both long and short drives more enjoyable.",
     subcategories: [
       {
         name: "Amplifiers",
         description: "Kicker Amplifiers will give you all the power and sound you need.",
-        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-19-at-11.45.19-AM-1.png"
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/amplifiers.jpg"
       },
       {
         name: "Subwoofers",
         description: "Make your sound larger than life with Kicker subwoofers.",
-        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-19-at-12.41.05-PM-1.png"
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/subwoofers.jpg"
       },
       {
         name: "Speakers",
         description: "Kicker Speakers give you excellent sound quality with remarkable performance.",
-        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-19-at-1.07.13-PM-1.png"
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/43ds.jpg"
       }
     ]
   },
@@ -78,23 +78,23 @@ export const BRANDS_DATA: Brand[] = [
     logo: "https://aceaudioinc.com/wp-content/uploads/2021/03/alpine-logo-vector-01-e1616022036711.png",
     description: "For over four decades, the Alpine brand has been synonymous with premium sound quality and innovation.",
     products: ["Sound Systems", "Amplifiers", "Subwoofers"],
-    image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Untitled-design-20.png",
+    image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Untitled-design-15.png",
     mainBiography: "For over four decades, the Alpine brand has been synonymous with premium sound quality and innovation. Explore the passion and dedication behind enhancing your drive. Make your drive your own! Our Alpine systems will bring your car to the 21st century by giving you the ultimate sound system.",
     subcategories: [
       {
         name: "Sound Systems",
         description: "Rise above the rest with Alpine Car play systems, the largest display on the market.",
-        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-12.49.01-PM-1.png"
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-12.49.01-PM.png"
       },
       {
         name: "Amplifiers",
         description: "No matter your system, Alpine amplifiers will deliver the power it takes to play your music.",
-        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-12.21.32-PM.png"
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-12.25.33-PM.png"
       },
       {
         name: "Subwoofers",
         description: "Our Alpine Subwoofers give you all the power and bass your system needs.",
-        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-12.38.16-PM.png"
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-12.18.04-PM.png"
       }
     ]
   },
@@ -128,23 +128,23 @@ export const BRANDS_DATA: Brand[] = [
     logo: "https://aceaudioinc.com/wp-content/uploads/2021/03/376510814PioneerLogo_medium.gif",
     description: "Rated as one of the best sounding sound systems nowadays. Pioneer is a hallmark of good engineering and good sound.",
     products: ["Speakers", "Amplifiers", "Entertainment Systems"],
-    image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Untitled-design-17.png",
+    image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Untitled-design-20.png",
     mainBiography: "Rated as one of the best sounding sound systems nowadays. Pioneer is a hallmark of good engineering and good sound with something for every budget. We want you to enjoy your ride more than ever by bringing Pioneer to your vehicle! Whatever vehicle you drive, we can make it sound and feel brand new.",
     subcategories: [
       {
         name: "Speakers",
         description: "Pioneer Speakers are designed to overachieve and to keep you relaxed on your journey.",
-        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-2.07.41-PM.png"
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-2.18.45-PM.png"
       },
       {
         name: "Amplifiers",
         description: "Our Pioneer amplifiers deliver high quality sound combined with impressive power.",
-        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-2.12.06-PM.png"
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-2.20.48-PM.png"
       },
       {
         name: "Entertainment Systems",
         description: "Pioneer digital media receivers are built specifically for CD-free digital music devotees.",
-        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-2.22.36-PM-1.png"
+        image: "https://aceaudioinc.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-26-at-2.22.36-PM.png"
       }
     ]
   },
