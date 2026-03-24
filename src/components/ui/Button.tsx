@@ -16,10 +16,10 @@ export const Button: React.FC<ButtonProps> = ({
   ...props 
 }) => {
   const variants = {
-    primary: "bg-primary text-bg-main hover:bg-white hover:neon-glow-cyan",
-    secondary: "bg-secondary text-white hover:bg-white hover:text-bg-main hover:neon-glow-magenta",
-    outline: "bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-bg-main",
-    neon: "bg-bg-panel border border-primary/50 text-primary hover:border-primary hover:neon-glow-cyan"
+    primary: "bg-gradient-to-r from-primary to-accent-1 text-white hover:shadow-[0_0_20px_var(--shadow-glow-primary)] border border-primary/20",
+    secondary: "bg-gradient-to-r from-secondary to-accent-2 text-white hover:shadow-[0_0_20px_var(--shadow-glow-secondary)] border border-secondary/20",
+    outline: "bg-transparent border-2 border-accent-3 text-accent-3 hover:bg-accent-3 hover:text-white hover:shadow-[0_0_15px_var(--shadow-glow-primary)]",
+    neon: "bg-bg-panel border border-accent-2 text-accent-2 hover:border-primary hover:shadow-[0_0_15px_var(--shadow-glow-primary)]"
   };
 
   const sizes = {

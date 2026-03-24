@@ -5,21 +5,18 @@ import { cn } from '@/src/lib/utils';
 interface CardProps {
   children: React.ReactNode;
   className?: string;
-  glowColor?: 'cyan' | 'magenta' | 'purple' | 'blue';
+  glowColor?: 'primary' | 'secondary' | 'accent1' | 'accent2';
   hover?: boolean;
 }
 
 export const Card: React.FC<CardProps> = ({ 
   children, 
   className, 
-  glowColor = 'cyan',
-  hover = true
-}) => {
   const glowStyles = {
-    cyan: "hover:border-primary/50 hover:shadow-[0_0_30px_var(--shadow-glow-primary)]",
-    magenta: "hover:border-secondary/50 hover:shadow-[0_0_30px_var(--shadow-glow-secondary)]",
-    purple: "hover:border-accent-1/50 hover:shadow-[0_0_30px_rgba(139,92,246,0.15)]",
-    blue: "hover:border-accent-2/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]"
+    primary: "hover:border-primary/50 hover:shadow-[0_0_30px_var(--shadow-glow-primary)]",
+    secondary: "hover:border-secondary/50 hover:shadow-[0_0_30px_var(--shadow-glow-secondary)]",
+    accent1: "hover:border-accent-1/50 hover:shadow-[0_0_30px_var(--shadow-glow-primary)]",
+    accent2: "hover:border-accent-2/50 hover:shadow-[0_0_30px_var(--shadow-glow-secondary)]"
   };
 
   return (

@@ -20,7 +20,7 @@ export const Hero: React.FC = () => {
           transition={{ duration: 0.8 }}
         >
           <motion.p 
-            className="text-primary font-accent tracking-[0.3em] text-sm sm:text-base mb-4 uppercase"
+            className="text-accent-2 font-accent tracking-[0.3em] text-sm sm:text-base mb-4 uppercase"
             animate={{ opacity: [0.5, 1, 0.5] }}
             transition={{ duration: 3, repeat: Infinity }}
           >
@@ -54,7 +54,7 @@ export const Hero: React.FC = () => {
           </div>
 
           <motion.div 
-            className="mt-16 inline-block glass-card px-6 py-3 border-secondary/30"
+            className="mt-16 inline-block glass-card px-6 py-3 border-accent-3/50"
             animate={{ scale: [1, 1.02, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
@@ -72,7 +72,7 @@ export const Hero: React.FC = () => {
         transition={{ duration: 2, repeat: Infinity }}
       >
         <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center pt-2">
-          <div className="w-1 h-2 bg-primary rounded-full" />
+          <div className="w-1 h-2 bg-secondary rounded-full" />
         </div>
       </motion.div>
     </section>

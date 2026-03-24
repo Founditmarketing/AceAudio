@@ -21,7 +21,7 @@ export const ProductsSection: React.FC = () => {
             viewport={{ once: true }}
             className="text-4xl sm:text-5xl font-black mb-4"
           >
-            OUR <span className="text-primary">PRODUCTS</span>
+            OUR <span className="text-accent-1">PRODUCTS</span>
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
@@ -39,6 +39,16 @@ export const ProductsSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {PRODUCT_SECTIONS.map((section, index) => {
             const IconComponent = (Icons as any)[section.icon];
+            
+            const colorMap = [
+              { text: 'text-primary', bg: 'bg-primary/10', glow: 'primary', groupHover: 'group-hover:text-primary' },
+              { text: 'text-secondary', bg: 'bg-secondary/10', glow: 'secondary', groupHover: 'group-hover:text-secondary' },
+              { text: 'text-accent-1', bg: 'bg-accent-1/10', glow: 'accent1', groupHover: 'group-hover:text-accent-1' },
+              { text: 'text-accent-2', bg: 'bg-accent-2/10', glow: 'accent2', groupHover: 'group-hover:text-accent-2' }
+            ];
+            
+            const pColor = colorMap[index % 4];
+
             return (
               <motion.div
                 key={section.id}
@@ -50,22 +60,22 @@ export const ProductsSection: React.FC = () => {
                 <Link to={`/products/${section.id}`}>
                   <Card 
                     className="h-full flex flex-col items-center text-center p-10 group cursor-pointer"
-                    glowColor={index % 2 === 0 ? 'cyan' : 'magenta'}
+                    glowColor={pColor.glow as any}
                   >
                     <div className={cn(
                       "w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-110",
-                      index % 2 === 0 ? "bg-primary/10 text-primary" : "bg-secondary/10 text-secondary"
+                      pColor.bg, pColor.text
                     )}>
                       {IconComponent && <IconComponent size={32} />}
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">{section.title}</h3>
+                    <h3 className={cn("text-2xl font-bold mb-4 transition-colors", pColor.groupHover)}>{section.title}</h3>
                     <p className="text-white/60 text-sm leading-relaxed mb-8">
                       {section.description}
                     </p>
                     <span 
                       className={cn(
-                        "mt-auto font-display text-xs tracking-widest font-bold uppercase transition-colors",
-                        index % 2 === 0 ? "text-primary group-hover:text-white" : "text-secondary group-hover:text-white"
+                        "mt-auto font-display text-xs tracking-widest font-bold uppercase transition-colors group-hover:text-white",
+                        pColor.text
                       )}
                     >
                       Explore Brands →
